@@ -1,0 +1,96 @@
+{% extends 'layouts/main.html' %}
+{% block content %}
+
+<div class="container mt-3">
+    <form>
+        <div class="row mt-3">
+            <div class="col">
+              <label for="text" class="form-label">First_name:</label>
+              <input type="text" class="form-control" placeholder="Enter your first name" name="first_name">
+            </div>
+            <div class="col">
+              <label for="password" class="form-label">Last_name:</label>
+              <input type="password" class="form-control" placeholder="Enter your last name" name="last_name">
+            </div>          
+        </div>
+        <div class="row mt-3">
+          <div class="col">
+            <label for="text" class="form-label">Email:</label>
+            <input type="text" class="form-control" placeholder="Enter your email" name="email">
+          </div>
+          <div class="col">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" class="form-control" name="pswd">
+          </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+              <label for="address" class="form-label">Address:</label>
+              <input type="text" class="form-control" name="address">
+            </div>
+            <div class="col">
+              <label for="contact" class="form-label">Contact:</label>
+              <input type="number" class="form-control" name="contact">
+            </div>          
+        </div>
+        <div class="row mt-3">
+          <div class="col">
+            <label for="myfile" multitple class="form-label">Choose your profile picture:</label>
+            <input type="file" class="form-control" name="myfile">
+          </div>
+          <div class="col">
+            <label for="number" class="form-label">Citizenships card number:</label>
+            <input type="number" class="form-control" name="number">
+          </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+              <label for="age" class="form-label">Age:</label>
+              <input type="number" class="form-control" name="age">
+            </div>
+            <div class="col">
+              <label for="gender" class="form-label">Gender:</label>
+              <select class="form-select" id="gender" name="gender">
+                <option>---------</option>
+                <option>Male</option>
+                <option>Female</option>                  
+              </select>
+            </div>               
+        </div>
+        <div class="row mt-3">
+          <div class="col">
+              <label for="qualification" class="form-label">Qualification:</label>
+              <select class="form-select" id="gender" name="gender">
+                <option>---------</option>
+                <option>SEE passed</option>
+                <option>+2 passsed</option> 
+                <option>Bachelor complete</option>   
+                <option>Degree complete</option>                 
+              </select>              
+            </div>
+            
+            <div class="col">
+              <label for="occupation" class="form-label">Occupation:</label>
+              <select class="form-select" id="occupation" name="occupation">
+                <option>---------</option>
+                <option>Students</option>
+                <option>Free Lancing</option> 
+                <option>Developer</option>   
+                <option>CEO</option>                 
+              </select>                 
+            </div>          
+        </div>
+        <div class="mt-3">
+          <label for="about you" class="form-label">About you:</label>
+          <textarea id="about you" class="form-control" name="about you"> </textarea>
+        </div> 
+        <div class="container mt-3">
+          <div class="row">
+            <div class="col">
+              <center><input type="submit" class="btn btn-warning" value="Submit"></center> 
+            </div>
+          </div>
+        </div>     
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'layouts/main.html' %}
+{% block content %}
+
+
+
+    
+    <div class="mt-5 p-5">
+        <form action="/">
+            <input type="submit" class="btn btn-warning" value="<<--Back-->>">
+        </form>
+    </div>
+
+    <div class="col-sm-9 p-5">
+        
+        <table class="table table-bordered">
+            <thead>
+                <tr>                        
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Age</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for d in data %}
+                <tr>
+                    <td>{{d.name}}</td>
+                    <td>{{d.address}}</td>
+                    <td>{{d.age}}</td>
+                    <td>
+                    <a href="/edit?id={{d.id}}">Edit</a>
+                    <a href="/delete?id={{d.id}}">Delete</a>
+                    </td>
+                </tr>  
+                {% endfor %}                             
+            </tbody>
+        </table> 
+    </div>     
+    
+       
+              
+{% endblock %}       
+    

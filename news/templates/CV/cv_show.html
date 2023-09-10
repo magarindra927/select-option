@@ -1,0 +1,104 @@
+{% extends 'layouts/main.html' %}
+{% block content %}
+
+<div class="mt-5 p-3 bg-dark">
+    <form action="/cv">
+        <input type="submit" class="btn btn-warning" value="<<---Back to data--->>">
+    </form>
+    <div class="mt-4 p-4">
+        <center><h3 class="text-info"><b>Personal information of Applicants</b></h3></center>
+        <table class="table border-collapse table-hover">
+            <thead>
+                <tr>
+                    <th>s.n</th>
+                    <th>name</th>
+                    <th>dob</th>
+                    <th>birth_place</th>
+                    <th>p_address</th>
+                    <th>f_name</th>
+                    <th>m_name</th>
+                    <th>gender</th>
+                    <th>telephone</th>
+                    <th>mobile</th>
+                    <th>email</th>
+                    <th>martial_status</th>
+                    <th>nationality</th> 
+                    <th>religion</th> 
+                </tr>
+            </thead>
+            <tbody>
+                {% for d in data %}
+                <tr>
+                    <td>{{d.s.n}}</td>
+                    <td>{{d.name}}</td>
+                    <td>{{d.dob}}</td>
+                    <td>{{d.birth_place}}</td>
+                    <td>{{d.p_address}}</td>
+                    <td>{{d.f_name}}</td>
+                    <td>{{d.m_name}}</td>
+                    <td>{{d.gender}}</td>
+                    <td>{{d.telephone}}</td>
+                    <td>{{d.mobile}}</td>
+                    <td>{{d.email}}</td>
+                    <td>{{d.martial_status}}</td>
+                    <td>{{d.nationality}}</td>
+                    <td>{{d.religion}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="mt-5 p-5">
+        <center><h3 class="text-info"><b>Academic Qualication of Applicants:<b><h3></center>
+        <table class="table border-collapse table-hover">
+            <thead>
+                <tr>
+                    
+                    <th>date</th>
+                    <th>qualification</th>                                 
+                </tr>
+            </thead>
+            <tbody>
+                {% for d1 in data1 %}
+                <tr>
+                   
+                    <td>{{d1.date}}</td>
+                    <td>{{d1.qualification}}</td>                                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="mt-5 p-5">
+        <center><h3 class="text-info"><b>Work Experience of Applicants:<b><h3></center>
+        <table class="table border-collapse table-hover">
+            <thead>
+                <tr>
+                    
+                    <th>skills</th>
+                    <th>language</th> 
+                    <th>traning</th>
+                    <th>interests</th>
+                    <th>reference</th>                                 
+                </tr>
+            </thead>
+            <tbody>
+                {% for d2 in data2 %}
+                <tr>
+                    
+                    <td>{{d2.skills}}</td>
+                    <td>{{d2.language}}</td>  
+                    <td>{{d2.computer_skills}}</td>
+                    <td>{{d2.training}}</td>
+                    <td>{{d2.interests}}</td>  
+                    <td>{{d2.reference}}</td>                                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+{% endblock %}
